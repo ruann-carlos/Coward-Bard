@@ -4,27 +4,23 @@ using UnityEngine;
 
 public class Paralax : MonoBehaviour
 {
-    [SerializeField] private GameObject background;
-    [SerializeField] private float speed;
-    // Start is called before the first frame update
-    void Start()
+    private Transform cam;
+    private Vector3 lastCameraPosition;
+    [SerializeField] private float parallaxEffect;
+    private void Start()
     {
-        ParalaxEffect();
+        cam = Camera.main.transform;
+        lastCameraPosition = cam.position;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void FixedUpdate()
     {
-        ParalaxEffect();
+        Vector3 deltaMovement = cam.position - lastCameraPosition;
+        
+        transform.position += deltaMovement * parallaxEffect;
+
+        lastCameraPosition = cam.position;
     }
 
-    private void ParalaxEffect()
-    {
-        if(background.transform.position.x <= -24.8)
-        {
-            background.transform.position = new Vector3(25, 1);
-        }
-        background.transform.position -= new Vector3(speed * Time.deltaTime, 0);
-    }
 
 }
