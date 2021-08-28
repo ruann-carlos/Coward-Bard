@@ -21,11 +21,12 @@ public class MovementHero : MonoBehaviour
     {
         
         InputManager.PlayerJump += Jump;
+        HeroLife.DeathAction += OnDeath;
     }
 
     private void OnDisable()
     {
-        
+        HeroLife.DeathAction -= OnDeath;
         InputManager.PlayerJump -= Jump;
     }
 
@@ -79,6 +80,12 @@ public class MovementHero : MonoBehaviour
         }
 
         transform.position = pos;
+    }
+
+    private void OnDeath()
+    {
+        animator.SetBool("IsDead", true);
+        this.speed = 0;
     }
 
 }

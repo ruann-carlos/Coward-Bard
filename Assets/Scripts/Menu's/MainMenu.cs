@@ -13,7 +13,7 @@ public class MainMenu : MonoBehaviour
         StartCoroutine(LoadScenes(sceneToLoad));
     }
 
-    public IEnumerator LoadScenes(string scene)
+    public static IEnumerator LoadScenes(string scene)
     {
         AsyncOperation asyncLoadScene = SceneManager.LoadSceneAsync(scene);
 
@@ -21,5 +21,10 @@ public class MainMenu : MonoBehaviour
         {
             yield return null;
         }
+    }
+
+    public void ExitGame()
+    {
+        Application.Quit();
     }
 }

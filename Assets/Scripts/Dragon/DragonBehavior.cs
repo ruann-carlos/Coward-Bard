@@ -11,6 +11,16 @@ public class DragonBehavior : MonoBehaviour
     [SerializeField] private float fireDistanceX;
     [SerializeField] private float fireDistanceY;
 
+    private void OnEnable()
+    {
+        HeroLife.DeathAction += OnDeath;
+    }
+
+    private void OnDisable()
+    {
+        HeroLife.DeathAction -= OnDeath;
+    }
+
     private void Start()
     {
         StartCoroutine(Attack());
@@ -31,6 +41,12 @@ public class DragonBehavior : MonoBehaviour
             GameObject fire = Instantiate(fireObject, pos, Quaternion.identity);
             fire.transform.SetParent(this.transform, true);
         }
+    }
+
+    private void OnDeath()
+    {
+        this.dragonSpeed = 0;
+        StopCoroutine(Attack());
     }
 
 }

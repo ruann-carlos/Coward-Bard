@@ -5,7 +5,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637654474700558464
+      ticks: 637657094622103817
     m_Hash: 549499932
   m_LockFileStatus:
     m_FilePath: D:/Genesis/GDV4/Coward Bard/Packages/packages-lock.json
@@ -13,7 +13,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637654474710023578
+      ticks: 637657094631363934
     m_Hash: 3259751617
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
@@ -660,11 +660,13 @@ m_PackageAssets:
         - 2.6.4
         - 2.6.5
         - 2.6.9
+        - 2.6.10
         - 2.7.1
         - 2.7.2
         - 2.7.3
         - 2.7.4
         - 2.7.5
+        - 2.7.8
         - 2.8.0-exp.1
         - 2.8.0-exp.2
         - 2.8.0-pre.1
@@ -685,16 +687,18 @@ m_PackageAssets:
         - 2.6.4
         - 2.6.5
         - 2.6.9
+        - 2.6.10
         - 2.7.1
         - 2.7.2
         - 2.7.3
         - 2.7.4
         - 2.7.5
+        - 2.7.8
         - 2.8.0-exp.1
         - 2.8.0-exp.2
         - 2.8.0-pre.1
         - 2.8.0
-        verified: 2.6.9
+        verified: 2.6.10
       dependencies: []
       resolvedDependencies: []
       keywords:
